@@ -1,7 +1,7 @@
 import csv
 import random
 
-names = ['Nikhil', 'Sanchit', 'Aditya', 'Sagar', 'Prateek']
+names = ['Anuj', 'Sanchit', 'Aditya', 'Sagar', 'Prateek']
 branches = ['COE', 'IT', 'SE', 'MCE']
 years = [1, 2, 3, 4]
 cgpas = [7.8, 8.5, 9.0, 9.1, 9.3, 9.5]
