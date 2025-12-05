@@ -1,12 +1,8 @@
-
 import pandas as pd
-
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import numpy as np
 import matplotlib.pyplot as plt
-
-
 
 df = pd.read_csv("linear_regression/data.csv")
 
@@ -44,5 +40,9 @@ plt.ylabel("Y")
 plt.title("Linear Regression Plot")
 plt.legend()
 plt.grid(True)
-
 plt.show()
+
+# ---------- Predict new value ----------
+new_x = float(input("Enter a new x value: "))   # user input
+new_y = model.predict([[new_x]])                # prediction
+print(f"Predicted y for x={new_x}: {new_y[0]}")

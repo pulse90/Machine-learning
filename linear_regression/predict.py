@@ -4,8 +4,6 @@ x = []
 y = []
 
 with open("linear_regression/data.csv", "r") as file:
-
-
     header = file.readline()  # skip header line: x,y
     for line in file:
         line = line.strip()
@@ -26,8 +24,8 @@ def mean(values):
 def linear_regression(x, y):
     x_mean = mean(x)
     y_mean = mean(y)
-    print(x_mean)
-    print(y_mean)
+    print("Mean of x:", x_mean)
+    print("Mean of y:", y_mean)
 
     num = 0.0
     den = 0.0
@@ -71,3 +69,8 @@ print("Mean Squared Error (MSE):", mse)
 print("\nActual vs Predicted:")
 for xi, yi, yi_pred in zip(x, y, predicted):
     print(f"x={xi}  actual={yi}  predicted={yi_pred}")
+
+# ---------- Predict new value ----------
+new_x = float(input("\nEnter a new x value: "))
+new_y = predict(new_x, m, b)
+print(f"Predicted y for x={new_x}: {new_y}")
