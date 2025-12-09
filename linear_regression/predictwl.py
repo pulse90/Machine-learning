@@ -31,7 +31,6 @@ plt.figure(figsize=(8,5))
 
 # Scatter plot of actual data
 plt.scatter(X, y, label="Actual Data")
-
 # Regression line
 plt.plot(X, y_pred, label="Regression Line")
 
